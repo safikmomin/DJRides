@@ -21,7 +21,7 @@ namespace testingApp
             //var disco = await DiscoveryClient.GetAsync(Constants.Authority);
             //if (disco.IsError) throw new Exception(disco.Error);
 
-            _tokenClient = new TokenClient("https://localhost:44375/connect/token", "client", "secret");
+            _tokenClient = new TokenClient("http://djridesauth20171227094924.azurewebsites.net/connect/token", "client", "secret");
 
             var response = await RequestTokenAsync();
             Console.WriteLine(response.Json);
@@ -52,7 +52,7 @@ namespace testingApp
         {
             return await _tokenClient.RequestResourceOwnerPasswordAsync(
                 "safikmomin@hotmail.com",
-                "Sm786110!",
+                "Bluepanther12!",
                 "MainApi1 offline_access profile openid");
         }
 

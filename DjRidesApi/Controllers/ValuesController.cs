@@ -4,11 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
+using DjRidesApi.Models;
 
 namespace DjRidesApi.Controllers
 {
     [Route("api/[controller]")]
-    [Authorize]
+    //[Authorize]
     public class ValuesController : Controller
     {
         // GET api/values
@@ -19,9 +20,12 @@ namespace DjRidesApi.Controllers
         //}
 
         [HttpGet]
-        public IActionResult Get()
+        public int Get()
         {
-            return new JsonResult(from c in User.Claims select new { c.Type, c.Value });
+            User user = new Models.User();
+            user.UserID = 1;
+
+            return user.UserID;
         }
 
         // GET api/values/5
