@@ -14,6 +14,7 @@ namespace DjRidesAuth.Data
             : base(options)
         {
         }
+        
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

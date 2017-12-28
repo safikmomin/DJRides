@@ -11,9 +11,10 @@ using System;
 namespace DjRidesApi.Migrations
 {
     [DbContext(typeof(DjRidesContext))]
-    partial class DjRidesContextModelSnapshot : ModelSnapshot
+    [Migration("20171227211238_Added_UserID")]
+    partial class Added_UserID
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

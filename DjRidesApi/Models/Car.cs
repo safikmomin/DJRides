@@ -10,6 +10,8 @@ namespace DjRidesApi.Models
     {
         public int CarID { get; set; }
 
+        public int UserID { get; set; }
+
         [Required]
         public string Make { get; set; }
 

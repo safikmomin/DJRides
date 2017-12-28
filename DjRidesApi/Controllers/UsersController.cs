@@ -25,6 +25,7 @@ namespace DjRidesApi.Controllers
 
         // GET: api/Users
         [HttpGet]
+        [Authorize]
         public IEnumerable<User> GetUsers()
         {
             return _context.Users;
@@ -32,6 +33,7 @@ namespace DjRidesApi.Controllers
 
         // GET: api/Users/5
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<IActionResult> GetUser([FromRoute] int id)
         {
             if (!ModelState.IsValid)
