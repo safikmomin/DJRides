@@ -203,6 +203,7 @@ namespace DjRidesAuth.Controllers
         {
             return View();
         }
+        
 
         [HttpGet]
         [AllowAnonymous]
@@ -241,6 +242,8 @@ namespace DjRidesAuth.Controllers
             return View(model);
         }
 
+        
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
@@ -249,6 +252,8 @@ namespace DjRidesAuth.Controllers
             _logger.LogInformation("User logged out.");
             return RedirectToAction(nameof(HomeController.Index), "Home");
         }
+
+
 
         [HttpPost]
         [AllowAnonymous]
@@ -296,6 +301,29 @@ namespace DjRidesAuth.Controllers
                 return View("ExternalLogin", new ExternalLoginViewModel { Email = email });
             }
         }
+
+
+        [HttpPost]
+        [AllowAnonymous]
+        public async Task<IActionResult> RegisterMobile(RegisterViewModel model, string returnUrl = null)
+        {
+            ViewData["ReturnUrl"] = returnUrl;
+            if (ModelState.IsValid)
+            {
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+
+                var result = await _userManager.CreateAsync(user, model.Password);
+                if (result.Succeeded)
+                {
+                    return Ok(result);
+                }
+                return new ObjectResult(result);
+            }
+
+            // If we got this far, something failed, redisplay form
+            return NotFound();
+        }
+
 
         [HttpPost]
         [AllowAnonymous]

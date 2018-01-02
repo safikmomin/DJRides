@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using DjRidesApi.Data;
 using DjRidesApi.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 
 namespace DjRidesApi.Controllers
 {
