@@ -9,7 +9,7 @@ using DjRidesApi.Models;
 namespace DjRidesApi.Controllers
 {
     [Route("api/[controller]")]
-    [Authorize]
+    //[Authorize]
     public class ValuesController : Controller
     {
         // GET api/values
@@ -30,6 +30,7 @@ namespace DjRidesApi.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
+        [Authorize]
         public string Get(int id)
         {
             return "value";
