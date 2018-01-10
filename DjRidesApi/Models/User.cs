@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace DjRidesApi.Models
 {
-    public class User
+    public class UserProfile
     {
-        public int UserID { get; set; }
+        public int UserProfileID { get; set; }
         
         public string FirstName { get; set; }
         

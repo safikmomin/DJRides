@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using DjRidesApi.Data;
 using DjRidesApi.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DjRidesAPI.Controllers
 {
@@ -23,21 +24,23 @@ namespace DjRidesAPI.Controllers
 
         // GET: api/Users
         [HttpGet]
-        public IEnumerable<User> GetUsers()
+        public IEnumerable<UserProfile> GetUsers()
         {
-            return _context.Users;
+            return _context.UserProfiles;
         }
 
         // GET: api/Users/5
+        [Authorize]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUser([FromRoute] int id)
         {
+            //var users = User.Claims.SingleOrDefault(t => t.Type == "sub");
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var user = await _context.Users.SingleOrDefaultAsync(m => m.UserID == id);
+            var user = await _context.UserProfiles.SingleOrDefaultAsync(m => m.UserProfileID == id);
 
             if (user == null)
             {
@@ -49,14 +52,14 @@ namespace DjRidesAPI.Controllers
 
         // PUT: api/Users/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUser([FromRoute] int id, [FromBody] User user)
+        public async Task<IActionResult> PutUser([FromRoute] int id, [FromBody] UserProfile user)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != user.UserID)
+            if (id != user.UserProfileID)
             {
                 return BadRequest();
             }
@@ -84,17 +87,17 @@ namespace DjRidesAPI.Controllers
 
         // POST: api/Users
         [HttpPost]
-        public async Task<IActionResult> PostUser([FromBody] User user)
+        public async Task<IActionResult> PostUser([FromBody] UserProfile user)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            _context.Users.Add(user);
+            _context.UserProfiles.Add(user);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetUser", new { id = user.UserID }, user);
+            return CreatedAtAction("GetUser", new { id = user.UserProfileID }, user);
         }
 
         // DELETE: api/Users/5
@@ -106,13 +109,13 @@ namespace DjRidesAPI.Controllers
                 return BadRequest(ModelState);
             }
 
-            var user = await _context.Users.SingleOrDefaultAsync(m => m.UserID == id);
+            var user = await _context.UserProfiles.SingleOrDefaultAsync(m => m.UserProfileID == id);
             if (user == null)
             {
                 return NotFound();
             }
 
-            _context.Users.Remove(user);
+            _context.UserProfiles.Remove(user);
             await _context.SaveChangesAsync();
 
             return Ok(user);
@@ -120,7 +123,7 @@ namespace DjRidesAPI.Controllers
 
         private bool UserExists(int id)
         {
-            return _context.Users.Any(e => e.UserID == id);
+            return _context.UserProfiles.Any(e => e.UserProfileID == id);
         }
     }
 }

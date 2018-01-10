@@ -26,11 +26,11 @@ namespace DjRidesApi.Models
 
         public int Country { get; set; }
 
-        public int UserID { get; set; }
+        public int UserProfileID { get; set; }
         
 
 
-        public User User { get; set; }
+        public UserProfile User { get; set; }
 
     }
 }

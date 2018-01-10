@@ -10,7 +10,7 @@ namespace DjRidesApi.Models
     {
         public int CarID { get; set; }
 
-        public int UserID { get; set; }
+        public int UserProfileID { get; set; }
 
         [Required]
         public string Make { get; set; }
@@ -25,7 +25,7 @@ namespace DjRidesApi.Models
 
         public string LicenseNumber { get; set; }
         
-        public User User { get; set; }
+        public UserProfile User { get; set; }
 
     }
 }

@@ -15,7 +15,7 @@ namespace DjRidesApi.Models
 
         public DateTime DateTime { get; set; }
 
-        public User User { get; set; }
+        public UserProfile User { get; set; }
 
         public Car Car { get; set; }
 
