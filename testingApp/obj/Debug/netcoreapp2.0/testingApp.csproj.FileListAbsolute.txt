@@ -1,0 +1,11 @@
+c:\users\safik\documents\visual studio 2017\Projects\DjRidesAuth\testingApp\bin\Debug\netcoreapp2.0\testingApp.deps.json
+c:\users\safik\documents\visual studio 2017\Projects\DjRidesAuth\testingApp\bin\Debug\netcoreapp2.0\testingApp.runtimeconfig.json
+c:\users\safik\documents\visual studio 2017\Projects\DjRidesAuth\testingApp\bin\Debug\netcoreapp2.0\testingApp.runtimeconfig.dev.json
+c:\users\safik\documents\visual studio 2017\Projects\DjRidesAuth\testingApp\bin\Debug\netcoreapp2.0\testingApp.dll
+c:\users\safik\documents\visual studio 2017\Projects\DjRidesAuth\testingApp\obj\Debug\netcoreapp2.0\testingApp.csproj.CoreCompileInputs.cache
+c:\users\safik\documents\visual studio 2017\Projects\DjRidesAuth\testingApp\obj\Debug\netcoreapp2.0\testingApp.AssemblyInfoInputs.cache
+c:\users\safik\documents\visual studio 2017\Projects\DjRidesAuth\testingApp\obj\Debug\netcoreapp2.0\testingApp.AssemblyInfo.cs
+c:\users\safik\documents\visual studio 2017\Projects\DjRidesAuth\testingApp\bin\Debug\netcoreapp2.0\testingApp.pdb
+c:\users\safik\documents\visual studio 2017\Projects\DjRidesAuth\testingApp\obj\Debug\netcoreapp2.0\testingApp.dll
+c:\users\safik\documents\visual studio 2017\Projects\DjRidesAuth\testingApp\obj\Debug\netcoreapp2.0\testingApp.pdb
+c:\users\safik\documents\visual studio 2017\Projects\DjRidesAuth\testingApp\obj\Debug\netcoreapp2.0\testingApp.csprojResolveAssemblyReference.cache

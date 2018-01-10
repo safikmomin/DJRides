@@ -1,0 +1,12 @@
+c:\users\safik\documents\visual studio 2017\Projects\DjRidesAuth\DjRidesAuth\bin\Debug\netcoreapp2.0\DjRidesAuth.deps.json
+c:\users\safik\documents\visual studio 2017\Projects\DjRidesAuth\DjRidesAuth\bin\Debug\netcoreapp2.0\DjRidesAuth.runtimeconfig.json
+c:\users\safik\documents\visual studio 2017\Projects\DjRidesAuth\DjRidesAuth\bin\Debug\netcoreapp2.0\DjRidesAuth.runtimeconfig.dev.json
+c:\users\safik\documents\visual studio 2017\Projects\DjRidesAuth\DjRidesAuth\bin\Debug\netcoreapp2.0\DjRidesAuth.dll
+c:\users\safik\documents\visual studio 2017\Projects\DjRidesAuth\DjRidesAuth\obj\Debug\netcoreapp2.0\DjRidesAuth.csprojResolveAssemblyReference.cache
+c:\users\safik\documents\visual studio 2017\Projects\DjRidesAuth\DjRidesAuth\obj\Debug\netcoreapp2.0\DjRidesAuth.csproj.CoreCompileInputs.cache
+c:\users\safik\documents\visual studio 2017\Projects\DjRidesAuth\DjRidesAuth\obj\Debug\netcoreapp2.0\DjRidesAuth.AssemblyInfoInputs.cache
+c:\users\safik\documents\visual studio 2017\Projects\DjRidesAuth\DjRidesAuth\obj\Debug\netcoreapp2.0\DjRidesAuth.AssemblyInfo.cs
+c:\users\safik\documents\visual studio 2017\Projects\DjRidesAuth\DjRidesAuth\bin\Debug\netcoreapp2.0\DjRidesAuth.pdb
+c:\users\safik\documents\visual studio 2017\Projects\DjRidesAuth\DjRidesAuth\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+c:\users\safik\documents\visual studio 2017\Projects\DjRidesAuth\DjRidesAuth\obj\Debug\netcoreapp2.0\DjRidesAuth.dll
+c:\users\safik\documents\visual studio 2017\Projects\DjRidesAuth\DjRidesAuth\obj\Debug\netcoreapp2.0\DjRidesAuth.pdb

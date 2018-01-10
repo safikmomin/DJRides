@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
 using System;
 
-namespace DjRidesApi.Migrations
+namespace DjRidesAPI.Migrations
 {
     [DbContext(typeof(DjRidesContext))]
     partial class DjRidesContextModelSnapshot : ModelSnapshot
@@ -27,6 +27,8 @@ namespace DjRidesApi.Migrations
 
                     b.Property<string>("City")
                         .IsRequired();
+
+                    b.Property<int>("Country");
 
                     b.Property<string>("State")
                         .IsRequired();
@@ -75,6 +77,59 @@ namespace DjRidesApi.Migrations
                     b.ToTable("Cars");
                 });
 
+            modelBuilder.Entity("DjRidesApi.Models.Ride", b =>
+                {
+                    b.Property<int>("RideID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("Availablity");
+
+                    b.Property<int>("CarID");
+
+                    b.Property<DateTime>("DateTime");
+
+                    b.Property<int?>("UserID");
+
+                    b.HasKey("RideID");
+
+                    b.HasIndex("CarID");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("Rides");
+                });
+
+            modelBuilder.Entity("DjRidesApi.Models.RideAddress", b =>
+                {
+                    b.Property<int>("RideAddressID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("City")
+                        .IsRequired();
+
+                    b.Property<int>("Country");
+
+                    b.Property<int?>("RideID");
+
+                    b.Property<string>("State")
+                        .IsRequired();
+
+                    b.Property<string>("Street1")
+                        .IsRequired();
+
+                    b.Property<string>("Street2");
+
+                    b.Property<int>("ToFrom");
+
+                    b.Property<int>("ZipCode");
+
+                    b.HasKey("RideAddressID");
+
+                    b.HasIndex("RideID");
+
+                    b.ToTable("RideAddressess");
+                });
+
             modelBuilder.Entity("DjRidesApi.Models.User", b =>
                 {
                     b.Property<int>("UserID")
@@ -109,6 +164,25 @@ namespace DjRidesApi.Migrations
                         .WithMany("Car")
                         .HasForeignKey("UserID")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("DjRidesApi.Models.Ride", b =>
+                {
+                    b.HasOne("DjRidesApi.Models.Car", "Car")
+                        .WithMany()
+                        .HasForeignKey("CarID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("DjRidesApi.Models.User", "User")
+                        .WithMany("Ride")
+                        .HasForeignKey("UserID");
+                });
+
+            modelBuilder.Entity("DjRidesApi.Models.RideAddress", b =>
+                {
+                    b.HasOne("DjRidesApi.Models.Ride", "Ride")
+                        .WithMany("Address")
+                        .HasForeignKey("RideID");
                 });
 #pragma warning restore 612, 618
         }

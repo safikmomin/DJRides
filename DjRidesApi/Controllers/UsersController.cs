@@ -7,14 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using DjRidesApi.Data;
 using DjRidesApi.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 
-namespace DjRidesApi.Controllers
+namespace DjRidesAPI.Controllers
 {
     [Produces("application/json")]
-    [Route("Users")]
-    
+    [Route("api/Users")]
     public class UsersController : Controller
     {
         private readonly DjRidesContext _context;
@@ -26,7 +23,6 @@ namespace DjRidesApi.Controllers
 
         // GET: api/Users
         [HttpGet]
-        [Authorize]
         public IEnumerable<User> GetUsers()
         {
             return _context.Users;
@@ -34,7 +30,6 @@ namespace DjRidesApi.Controllers
 
         // GET: api/Users/5
         [HttpGet("{id}")]
-        [Authorize]
         public async Task<IActionResult> GetUser([FromRoute] int id)
         {
             if (!ModelState.IsValid)
@@ -53,7 +48,6 @@ namespace DjRidesApi.Controllers
         }
 
         // PUT: api/Users/5
-        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUser([FromRoute] int id, [FromBody] User user)
         {
@@ -104,7 +98,6 @@ namespace DjRidesApi.Controllers
         }
 
         // DELETE: api/Users/5
-        [Authorize]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser([FromRoute] int id)
         {

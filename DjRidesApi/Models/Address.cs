@@ -20,11 +20,15 @@ namespace DjRidesApi.Models
         
         [Required]
         public string State { get; set; }
-        
+
         [Required]
         public int ZipCode { get; set; }
-        
+
+        public int Country { get; set; }
+
         public int UserID { get; set; }
+        
+
 
         public User User { get; set; }
 

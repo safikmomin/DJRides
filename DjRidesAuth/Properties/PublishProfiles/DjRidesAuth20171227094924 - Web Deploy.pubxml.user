@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA1PVHm6/qMEaSY+1HBRGMaAAAAAACAAAAAAAQZgAAAAEAACAAAABZ6mEttCGzwn1LYzdPfhi7EV2gSJCgADGtC0R/jxLmJQAAAAAOgAAAAAIAACAAAAC1iMAwyYBnNx6ZuSWCSKzY8xO1juKmQA8eCJENl2sYkYAAAAAXbLFadMvooDJ6bL6jUMiEYj9LURSm1078WvJqxdLMc97najFDl3+K6eeSlMdtz9usHOKTCZ52spCaKy7bxIUKkd9ytw2Urk87CNy6Ied9ikCrJcOSGwL7+M3IfU48ykqsM1YzXs9fmNK5FzY9YAsm+aDM0AUIhLU2yW5pfUKlpUAAAADz0k/i7Y1tsSVxFdR787CNChRXYXmYEMwDO88yg63C6sDXLEQGOx+niXNc7zbn+18k7+6KJxvFJeHAjFl4iXAL</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=tcp:djridesauth-dbserver.database.windows.net,1433;Initial Catalog=DjRidesAuth_db;User Id=safik@djridesauth-dbserver;Password=Bluepanther12</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="DjRidesAuth.Data.ApplicationDbContext">
+      <Value>Data Source=tcp:djridesauth-dbserver.database.windows.net,1433;Initial Catalog=DjRidesAuth_db;User Id=safik@djridesauth-dbserver;Password=Bluepanther12</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

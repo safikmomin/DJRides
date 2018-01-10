@@ -21,6 +21,8 @@ namespace DjRidesApi.Models
 
         public Address Address { get; set; }
 
+        public ICollection<Ride> Ride { get; set; }
+
         public ICollection<Car> Car { get; set; }
     }
 }

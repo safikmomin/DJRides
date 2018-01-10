@@ -12,9 +12,12 @@ namespace DjRidesApi.Data
         public DjRidesContext(DbContextOptions<DjRidesContext> options) : base(options)
         {
         }
+        
 
         public DbSet<User> Users { get; set; }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Car> Cars { get; set; }
+        public DbSet<RideAddress> RideAddressess { get; set; }
+        public DbSet<Ride> Rides { get; set; }
     }
 }
